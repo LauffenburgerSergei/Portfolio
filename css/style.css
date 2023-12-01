@@ -1,0 +1,301 @@
+/*#-#-#-#-#-#-#-#-#-#-#-#-#-#-# import fonts #-#-#-#-#-#-#-#-#-#-#-#-#-#-#*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap");
+
+/*#-#-#-#-#-#-#-#-#-#-#-#-#-#-# barre de scrool #-#-#-#-#-#-#-#-#-#-#-#-#-#-#*/
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: -webkit-linear-gradient(
+    #141019,
+    /* Plus foncé que #141019 pour le début */ #141019,
+    /* Votre couleur principale */ #141019
+      /* Une nuance plus claire pour la fin */
+  );
+}
+/*#############################################################################################################*/
+/*--------------------------------------------------  GÉNÉRAL  ------------------------------------------------*/
+/*#############################################################################################################*/
+:root {
+  /* Colors */
+  --primary: #1d1b30;
+  --secondary: #f59b09;
+  --complementary: #00ffff;
+  --white: #faf4f8;
+  --black: #141019;
+}
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--primary);
+}
+h1 {
+  font-size: 6rem; /* à modifier */
+  font-weight: 900; /* à modifier */
+  font-family: "Roboto", sans-serif; /* à modifier */
+}
+h2 {
+  font-size: 4.5rem; /* à modifier */
+  font-weight: 900; /* à modifier */
+  font-family: "Roboto", sans-serif; /* à modifier */
+}
+h3 {
+  font-size: 2rem; /* à modifier */
+  font-weight: 900; /* à modifier */
+  font-family: "Roboto", sans-serif; /* à modifier */
+}
+/* (à ajouter si besoin ) */
+/* h4 {
+    font-size: 2rem; 
+    font-weight: 900; 
+    font-family: "Roboto", sans-serif; 
+  }*/
+/*h5 {
+    font-size: 2rem; 
+    font-weight: 900; 
+    font-family: "Roboto", sans-serif; 
+  }*/
+/*h6 {
+    font-size: 2rem; 
+    font-weight: 900; 
+    font-family: "Roboto", sans-serif; 
+  } */
+p {
+  font-size: 1.6rem; /* à modifier */
+  font-family: "Jost", sans-serif; /* à modifier */
+}
+.container {
+  max-width: 140rem;
+  margin: 0 auto;
+}
+.highlight {
+  color: #f59b09;
+}
+.active {
+  color: var(--secondary); 
+}
+/*#############################################################################################################*/
+/*--------------------------------------------------  HEADER  -------------------------------------------------*/
+/*#############################################################################################################*/
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100%;
+  background-color: var(--black);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.logo-section img {
+  width: 6rem;
+}
+
+.nav__section ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__section--link li {
+  padding: 2rem 0;
+}
+
+.nav__section ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.nav__section ul li a:hover {
+  color: var(--secondary);
+}
+.social__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.social__section div {
+  margin: 10px 0;
+}
+
+.social__section a {
+  color: white;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.social__section a:hover {
+  color: var(--secondary);
+}
+
+/*#############################################################################################################*/
+/*--------------------------------------------------  MAIN  ---------------------------------------------------*/
+/*#############################################################################################################*/
+#main-content {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  min-height: 100vh;
+}
+
+.content-left {
+  flex: 1;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-right {
+  flex: 1;
+  text-align: right;
+}
+
+.content-right img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+#main-content h1 {
+  color: var(--white);
+
+  margin-bottom: 10px;
+}
+
+#main-content h2 {
+  color: var(--white);
+
+  margin-bottom: 20px;
+}
+
+#main-content p {
+  line-height: 1.6;
+  color: var(--white);
+  margin-bottom: 30px;
+}
+
+.portfolio-button {
+  background-color: transparent;
+  color: var(--secondary);
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: 2px solid var(--secondary);
+  cursor: pointer;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio-button:hover {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+/*#############################################################################################################*/
+/*--------------------------------------------------  FOOTER  -------------------------------------------------*/
+/*#############################################################################################################*/
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2.5rem 9%;
+  background: var(--black);
+}
+
+.footer-text {
+  color: var(--white);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-text p {
+  font-size: 1.6rem;
+}
+
+.footer-iconTop a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  background: var(--primary);
+  border: 0.2rem solid var(--secondary);
+  border-radius: 0.6rem;
+  z-index: 1;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.footer-iconTop a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--secondary);
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.footer-iconTop a:hover:before {
+  width: 100%;
+}
+
+.footer-iconTop a i {
+  font-size: 2.4rem;
+  color: var(--white);
+  transition: 0.5s;
+}
+
+.footer-iconTop a:hover i {
+  color: var(--primary);
+}
+.fas {
+  text-decoration: none;
+}
+
+/*#############################################################################################################*/
+/*--------------------------------------------------  MÉDIA QUERYS  -------------------------------------------*/
+/*#############################################################################################################*/
