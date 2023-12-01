@@ -47,17 +47,22 @@ body {
 h1 {
   font-size: 6rem; /* à modifier */
   font-weight: 900; /* à modifier */
+  color: var(--white);
   font-family: "Roboto", sans-serif; /* à modifier */
+  padding-bottom: 5rem;
 }
 h2 {
   font-size: 4.5rem; /* à modifier */
   font-weight: 900; /* à modifier */
+  color: var(--white);
   font-family: "Roboto", sans-serif; /* à modifier */
+  padding-bottom: 5rem;
 }
 h3 {
   font-size: 2rem; /* à modifier */
   font-weight: 900; /* à modifier */
   font-family: "Roboto", sans-serif; /* à modifier */
+  color: var(--white);
 }
 /* (à ajouter si besoin ) */
 /* h4 {
@@ -78,17 +83,43 @@ h3 {
 p {
   font-size: 1.6rem; /* à modifier */
   font-family: "Jost", sans-serif; /* à modifier */
+  line-height: 1.6;
+  color: var(--white);
 }
 .container {
   max-width: 140rem;
   margin: 0 auto;
 }
-.highlight {
+span {
   color: #f59b09;
 }
 .active {
-  color: var(--secondary); 
+  color: var(--secondary);
 }
+
+/*--------------------------------------------------  BUTTON  -------------------------------------------------*/
+.portfolio-button {
+  background-color: transparent;
+  color: var(--secondary);
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: 2px solid var(--secondary);
+  cursor: pointer;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Jost", sans-serif;
+}
+
+.portfolio-button:hover {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
 /*#############################################################################################################*/
 /*--------------------------------------------------  HEADER  -------------------------------------------------*/
 /*#############################################################################################################*/
@@ -96,7 +127,7 @@ p {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100px;
+  width: 10rem;
   height: 100%;
   background-color: var(--black);
   color: var(--white);
@@ -165,13 +196,18 @@ p {
 /*#############################################################################################################*/
 /*--------------------------------------------------  MAIN  ---------------------------------------------------*/
 /*#############################################################################################################*/
+
+/*--------------------------------------------------  Home  ---------------------------------------------------*/
+
 #main-content {
   display: flex;
   align-items: center;
-  padding: 40px;
   min-height: 100vh;
 }
 
+#main-content p {
+  padding-bottom: 5rem;
+}
 .content-left {
   flex: 1;
   padding-right: 20px;
@@ -189,46 +225,224 @@ p {
   max-width: 100%;
   height: auto;
   border-radius: 50%;
-}
-
-#main-content h1 {
-  color: var(--white);
-
-  margin-bottom: 10px;
-}
-
-#main-content h2 {
-  color: var(--white);
-
-  margin-bottom: 20px;
+  padding-left: 5rem;
 }
 
 #main-content p {
   line-height: 1.6;
-  color: var(--white);
+
   margin-bottom: 30px;
 }
+/*--------------------------------------------------  ABOUT  --------------------------------------------------*/
 
-.portfolio-button {
-  background-color: transparent;
-  color: var(--secondary);
-  padding: 10px 20px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-size: 18px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  border: 2px solid var(--secondary);
-  cursor: pointer;
-  width: 200px;
+.about {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 6rem;
+  width: 100%;
+}
+.about h2 {
+  padding-top: 5rem;
 }
 
-.portfolio-button:hover {
-  background-color: var(--secondary);
-  color: var(--primary);
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 65%;
 }
+
+.about-content h3 {
+  padding-top: 30px;
+}
+
+.about-content p {
+  text-align: justify;
+  padding-top: 5px;
+  margin: 2rem 0 1rem;
+}
+
+.about-img {
+  position: relative;
+  width: 25rem;
+  height: 25rem;
+  display: flex;
+  justify-content: center;
+}
+
+.about-img img {
+  width: 100%;
+  border-radius: 50%;
+  border: 0.2rem solid var(--white);
+}
+
+.about-img .circle-spin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0);
+  width: 110%;
+  height: 110%;
+  border-radius: 50%;
+  border-top: 0.2rem solid var(--primary);
+  border-bottom: 0.2rem solid var(--primary);
+  border-left: 0.2rem solid var(--secondary);
+  border-right: 0.2rem solid var(--secondary);
+  animation: aboutSpinner 8s linear infinite;
+}
+
+/*--------------------------------------------------  Portfolio  ----------------------------------------------*/
+.portfolio h2 {
+  text-align: center;
+  padding-top: 5rem;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.box {
+  position: relative;
+  width: 280px;
+  height: 400px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  transform-style: preserve-3d;
+  transform: perspective(800px);
+}
+
+.box a {
+  text-decoration: none;
+}
+
+.box img {
+  border-radius: 10px; /* Ajout de border-radius pour les images */
+}
+
+h4 {
+  color: #f5f5f5;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+p {
+  color: var(--white);
+  margin: 2rem 1rem;
+  font-family: "jost", sans-serif;
+}
+
+.description {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 40rem;
+  justify-content: space-evenly;
+}
+
+.description img {
+  width: 25rem;
+}
+/*--------------------------------------------------  CONTACT  ------------------------------------------------*/
+
+.contact {
+  min-height: auto;
+  padding: 30rem 0;
+}
+.contact h2 {
+  text-align: center;
+}
+
+.contact Form {
+  max-width: 70rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact form .input-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact form .input-box .input-field {
+  position: relative;
+  width: 49%;
+  margin: 0.8rem 0;
+}
+
+.contact form .input-box .input-field input,
+.contact form .textarea-field textarea {
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--white);
+  background: transparent;
+  border-radius: 0.6rem;
+  border: 0.2rem solid var(--secondary);
+}
+
+.contact form .input-box .input-field input::placeholder,
+.contact form .textarea-field textarea::placeholder {
+  color: var(--text-color);
+}
+
+.contact form .focus {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--black);
+  border-radius: 0.6rem;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.contact form .input-box .input-field input:focus ~ .focus,
+.contact form .input-box .input-field input:valid ~ .focus,
+.contact form .textarea-field textarea:focus ~ .focus,
+.contact form .textarea-field textarea:valid ~ .focus {
+  width: 100%;
+}
+
+.contact form .textarea-field {
+  position: relative;
+  margin: 0.8rem 0 2.7rem;
+  display: flex;
+}
+
+.contact form .textarea-field textarea {
+  resize: none;
+}
+
+form .btn-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.contact form .btn {
+  cursor: pointer;
+}
+
 /*#############################################################################################################*/
 /*--------------------------------------------------  FOOTER  -------------------------------------------------*/
 /*#############################################################################################################*/
@@ -247,10 +461,6 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.footer-text p {
-  font-size: 1.6rem;
 }
 
 .footer-iconTop a {
@@ -299,3 +509,13 @@ p {
 /*#############################################################################################################*/
 /*--------------------------------------------------  MÉDIA QUERYS  -------------------------------------------*/
 /*#############################################################################################################*/
+
+/*#############################################################################################################*/
+/*--------------------------------------------------  Keyframes  ----------------------------------------------*/
+/*#############################################################################################################*/
+
+@keyframes aboutSpinner {
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
