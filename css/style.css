@@ -343,8 +343,11 @@ span {
   text-decoration: none;
 }
 
-.box img {
-  border-radius: 10px; /* Ajout de border-radius pour les images */
+.box img, .description img {
+  border-radius: 10px;
+  object-fit: cover; /* Assure que l'image couvre l'espace sans déformation */
+  width: 200px; /* Largeur fixe pour les images */
+  height: 150px; /* Hauteur fixe pour les images */
 }
 
 h4 {
@@ -367,9 +370,7 @@ p {
   justify-content: space-evenly;
 }
 
-.description img {
-  width: 25rem;
-}
+
 /*--------------------------------------------------  CONTACT  ------------------------------------------------*/
 
 .contact {
