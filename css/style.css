@@ -145,12 +145,12 @@ span {
 .logo-section {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-start; /* Aligné à gauche */
   margin-bottom: 20rem;
 }
 
 .logo-section img {
-  width: 5rem;
+  width: 3.5rem;
 }
 
 .nav__section {
@@ -172,7 +172,7 @@ span {
   padding: 2rem 0;
   display: flex;
   align-items: center;
-  overflow: hidden; /* Empêche le débordement du texte en dehors du li */
+  overflow: hidden;
 }
 
 .nav__section--link li a {
@@ -187,19 +187,18 @@ span {
   display: block;
   margin-left: 10px;
   opacity: 0;
-  transform: translateX(-20px); /* Déplacement initial */
+  transform: translateX(-20px);
   transition: transform 0.3s ease, opacity 0.3s ease;
-  transition-delay: 0.5s; /* Commence après le survol de la sidebar */
-  padding-left: 2rem;
-  color: var(--white);
+  transition-delay: 0.5s;
 }
 
 #sidebar:hover .nav__section--link li a .text {
   opacity: 1;
-  transform: translateX(0); /* Retour à la position originale */
+  transform: translateX(0);
+  color: var(--white);
 }
 
-#sidebar:hover .nav__section--link li a .text:hover {
+#sidebar:hover .nav__section--link li a .text:hover{
   color: var(--secondary);
 }
 
