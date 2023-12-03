@@ -127,72 +127,101 @@ span {
   position: fixed;
   top: 0;
   left: 0;
-  width: 10rem;
+  width: 7rem; 
   height: 100%;
   background-color: var(--black);
   color: var(--white);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: width 0.5s;
 }
 
-.sidebar__header {
+#sidebar:hover {
+  width: 200px;
+}
+
+.logo-section {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
+  align-items: flex-start;
+  margin-bottom: 20rem;
 }
 
 .logo-section img {
-  width: 6rem;
+  width: 5rem;
 }
 
-.nav__section ul {
+.nav__section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.nav__section ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  width: 100%;
 }
 
 .nav__section--link li {
   padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden; /* Empêche le débordement du texte en dehors du li */
 }
 
-.nav__section ul li a {
+.nav__section--link li a {
+  display: flex;
+  align-items: center;
   color: white;
   text-decoration: none;
   font-size: 24px;
-  display: block;
-  transition: color 0.3s ease;
 }
 
-.nav__section ul li a:hover {
+.nav__section--link li a .text {
+  display: block;
+  margin-left: 10px;
+  opacity: 0;
+  transform: translateX(-20px); /* Déplacement initial */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition-delay: 0.5s; /* Commence après le survol de la sidebar */
+  padding-left: 2rem;
+  color: var(--white);
+}
+
+#sidebar:hover .nav__section--link li a .text {
+  opacity: 1;
+  transform: translateX(0); /* Retour à la position originale */
+}
+
+#sidebar:hover .nav__section--link li a .text:hover {
   color: var(--secondary);
 }
+
 .social__section {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-.social__section div {
-  margin: 10px 0;
+  align-items: flex-start;
 }
 
 .social__section a {
   color: white;
   font-size: 20px;
+  margin: 10px 0;
   transition: color 0.3s ease;
 }
 
 .social__section a:hover {
   color: var(--secondary);
 }
-
 /*#############################################################################################################*/
 /*--------------------------------------------------  MAIN  ---------------------------------------------------*/
 /*#############################################################################################################*/
