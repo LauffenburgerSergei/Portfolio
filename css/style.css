@@ -413,8 +413,10 @@ p {
 
 .contact {
   min-height: auto;
-  padding: 40rem 0 30rem;
+  padding: 30rem 0;
+  
 }
+
 .contact h2 {
   text-align: center;
   padding-bottom: 10rem;
@@ -505,6 +507,7 @@ form .btn-box {
   flex-wrap: wrap;
   padding: 2.5rem 9%;
   background: var(--black);
+ 
 }
 
 .footer-text {
