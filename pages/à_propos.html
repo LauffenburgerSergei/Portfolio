@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="(mettre le nom de l'auteur du site)" />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/tools.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/tools.css" />
     <link
       rel="icon"
       type="image/x-icon"
@@ -30,7 +30,7 @@
           <a href="index.html">
             <img
               class="logo"
-              src="assets/favicon/Logo_sergei.svg"
+              src="/assets/favicon/Logo_sergei.svg"
               alt="Logo Sergei"
             />
           </a>
@@ -39,25 +39,25 @@
         <nav class="nav__section">
           <ul class="nav__section--link">
             <li>
-              <a id="#home" href="index.html">
+              <a href="/index.html">
                 <i class="fas fa-home active"></i>
                 <span class="text">Home</span>
               </a>
             </li>
             <li>
-              <a  href="pages/à_propos.html">
+              <a id="#about" href="/pages/à_propos.html">
                 <i class="fas fa-user"></i>
                 <span class="text">About</span>
               </a>
             </li>
             <li>
-              <a  href="pages/portfolio.html">
+              <a href="/pages/portfolio.html">
                 <i class="fa-solid fa-folder-open"></i>
                 <span class="text">Portfolio</span>
               </a>
             </li>
             <li>
-              <a id="#contact" href="pages/contact.html">
+              <a href="/pages/contact.html">
                 <i class="fas fa-envelope"></i>
                 <span class="text">Contact</span>
               </a>
@@ -83,43 +83,68 @@
     <!--------------------------------------------------  MAIN  -------------------------------------------------->
     <!------------------------------------------------------------------------------------------------------------>
     <main class="container">
-      <section id="home">
-        <!------------------------------------------------  HOME  ------------------------------------------------>
-        <div id="main-content">
-          <div class="content-left">
-            <h1>I'm <span class="highlight">Sergei</span></h1>
-            <h2><span>Designer</span> UX/UI</h2>
-            <p>
-              À la recherche d'un
-              <span>stage</span>
-              captivant pour parfaire mes compétences en tant que
-              <span>designer UX/UI</span>
-              , dans le cadre d'une formation qui a débuté le
-              <span>19 septembre 2023</span>
-              et qui se termine le
-              <span>15 juillet 2024</span>
-              , en
-              <span>Occitanie</span>
-              .
-            </p>
-            <div class="btn__cv">
-              <a href="#portfolio" class="portfolio-button"
-                >View My Portfolio</a
-              >
-              <a
-                href="assets/cv/CV Designer UX-UI.pdf"
-                class="portfolio-button"
-                target="_blank"
-                >View My CV</a
-              >
-            </div>
-          </div>
-          <div class="content-right">
-            <img src="assets/img/moi2.png" alt="Sergei" />
-          </div>
+     
+      <!------------------------------------------------  ABOUT  ------------------------------------------------->
+
+      <section class="about" id="about">
+        <h2>
+          A propos de
+          <span>Moi</span>
+        </h2>
+
+        <div class="about-img">
+          <img src="/assets/img/moi2.png" alt="Photo profil " />
+          <span class="circle-spin"></span>
+        </div>
+        <div class="about-content">
+          <h3>
+            Frontend Developer!
+            <span>mais pas seulement</span>
+          </h3>
+          <p>
+            À la recherche d'un <span>stage enrichissant</span> pour développer
+            mes compétences en tant que <span>designer UX/UI</span> ? Ne
+            cherchez plus ! Je suis prêt à m'engager dans une expérience
+            passionnante dès le <span>15 avril</span> et ce jusqu'au
+            <span>27 juin 2024</span>.
+          </p>
+          <p>
+            Je suis avide de mettre en pratique mes connaissances fraîchement
+            acquises dans le domaine du design UX/UI et je suis déterminé à
+            contribuer activement à votre équipe. Avec mon sens aiguisé de
+            l'esthétique, ma passion pour la résolution de problèmes et ma
+            capacité à créer des expériences utilisateur exceptionnelles, je
+            suis convaincu que je serai un atout précieux pour votre entreprise.
+          </p>
+          <p>
+            Je suis prêt à relever tous les défis qui se présenteront à moi au
+            cours de ce stage, et je suis motivé à apprendre auprès des
+            meilleurs professionnels du secteur. Mon objectif est de développer
+            mes compétences en matière de conception d'interfaces intuitives, de
+            wireframing, de prototypage interactif et d'optimisation de
+            l'expérience utilisateur.
+          </p>
+          <p>
+            En me choisissant comme stagiaire pour cette période, vous
+            bénéficierez d'un collaborateur passionné, créatif et prêt à
+            s'investir pleinement dans chaque projet. Je suis impatient de faire
+            partie de votre équipe et de contribuer à la création de produits et
+            services qui repoussent les limites de l'expérience utilisateur.
+          </p>
+          <p>
+            N'hésitez pas à me contacter pour discuter de la manière dont ma
+            candidature peut répondre à vos besoins spécifiques. Je serais ravi
+            de vous rencontrer et de vous présenter de vive voix mes idées et
+            mon enthousiasme.
+          </p>
+          <p>
+            Merci d'avance pour votre considération et j'espère avoir
+            l'opportunité de collaborer avec vous pour créer des expériences
+            utilisateur exceptionnelles et marquantes !
+          </p>
         </div>
       </section>
-      
+     
     </main>
     <!------------------------------------------------------------------------------------------------------------>
     <!--------------------------------------------------  FOOTER  ------------------------------------------------>
@@ -139,6 +164,6 @@
       </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
-    <script src="js/app.js"></script>
+    <script src="/js/app.js"></script>
   </body>
 </html>

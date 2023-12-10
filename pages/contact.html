@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="(mettre le nom de l'auteur du site)" />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/tools.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/tools.css" />
     <link
       rel="icon"
       type="image/x-icon"
@@ -30,7 +30,7 @@
           <a href="index.html">
             <img
               class="logo"
-              src="assets/favicon/Logo_sergei.svg"
+              src="/assets/favicon/Logo_sergei.svg"
               alt="Logo Sergei"
             />
           </a>
@@ -39,25 +39,25 @@
         <nav class="nav__section">
           <ul class="nav__section--link">
             <li>
-              <a id="#home" href="index.html">
+              <a  href="/index.html">
                 <i class="fas fa-home active"></i>
                 <span class="text">Home</span>
               </a>
             </li>
             <li>
-              <a  href="pages/à_propos.html">
+              <a href="/pages/à_propos.html">
                 <i class="fas fa-user"></i>
                 <span class="text">About</span>
               </a>
             </li>
             <li>
-              <a  href="pages/portfolio.html">
+              <a href="/pages/portfolio.html">
                 <i class="fa-solid fa-folder-open"></i>
                 <span class="text">Portfolio</span>
               </a>
             </li>
             <li>
-              <a id="#contact" href="pages/contact.html">
+              <a id="#contact" href="/pages/contact.html">
                 <i class="fas fa-envelope"></i>
                 <span class="text">Contact</span>
               </a>
@@ -82,44 +82,78 @@
     <!------------------------------------------------------------------------------------------------------------>
     <!--------------------------------------------------  MAIN  -------------------------------------------------->
     <!------------------------------------------------------------------------------------------------------------>
-    <main class="container">
-      <section id="home">
-        <!------------------------------------------------  HOME  ------------------------------------------------>
-        <div id="main-content">
-          <div class="content-left">
-            <h1>I'm <span class="highlight">Sergei</span></h1>
-            <h2><span>Designer</span> UX/UI</h2>
-            <p>
-              À la recherche d'un
-              <span>stage</span>
-              captivant pour parfaire mes compétences en tant que
-              <span>designer UX/UI</span>
-              , dans le cadre d'une formation qui a débuté le
-              <span>19 septembre 2023</span>
-              et qui se termine le
-              <span>15 juillet 2024</span>
-              , en
-              <span>Occitanie</span>
-              .
-            </p>
-            <div class="btn__cv">
-              <a href="#portfolio" class="portfolio-button"
-                >View My Portfolio</a
-              >
-              <a
-                href="assets/cv/CV Designer UX-UI.pdf"
-                class="portfolio-button"
-                target="_blank"
-                >View My CV</a
-              >
+    
+
+      <!------------------------------------------------  CONTACT  ----------------------------------------------->
+      <section class="contact" id="contact">
+        <h2>
+          Contactez
+          <span>moi!</span>
+        </h2>
+
+        <form action="https://formspree.io/f/mdovvepr" method="POST">
+          <div class="input-box">
+            <div class="input-field">
+              <label>
+                <input
+                  type="text"
+                  name="Name"
+                  placeholder="Nom complet"
+                  required
+                />
+                <span class="focus"></span>
+              </label>
+            </div>
+            <div class="input-field">
+              <label>
+                <input type="text" name="Email" placeholder="Email" required />
+                <span class="focus"></span>
+              </label>
             </div>
           </div>
-          <div class="content-right">
-            <img src="assets/img/moi2.png" alt="Sergei" />
+          <div class="input-box">
+            <div class="input-field">
+              <label>
+                <input
+                  type="text"
+                  name="Number"
+                  placeholder="Numéro"
+                  required
+                />
+                <span class="focus"></span>
+              </label>
+            </div>
+            <div class="input-field">
+              <label>
+                <input type="text" name="Objet" placeholder="Object" required />
+                <span class="focus"></span>
+              </label>
+            </div>
           </div>
-        </div>
+          <div class="textarea-field">
+            <textarea
+              name="message"
+              cols="30"
+              rows="10"
+              placeholder="Votre message"
+              required
+            ></textarea>
+            <span class="focus"></span>
+          </div>
+
+          <div class="btn-box btns">
+            <button type="submit" class="portfolio-button">Envoyer</button>
+            <button
+              type="button"
+              class="portfolio-button"
+              onclick="window.location.reload(false)"
+              value="Rafraichir"
+            >
+              Rafraichir
+            </button>
+          </div>
+        </form>
       </section>
-      
     </main>
     <!------------------------------------------------------------------------------------------------------------>
     <!--------------------------------------------------  FOOTER  ------------------------------------------------>
@@ -139,6 +173,6 @@
       </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
-    <script src="js/app.js"></script>
+    <script src="/js/app.js"></script>
   </body>
 </html>

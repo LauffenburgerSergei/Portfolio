@@ -66,10 +66,10 @@ h3 {
 }
 
 h4 {
-    font-size: 2rem; 
-    font-weight: 900; 
-    font-family: "Roboto", sans-serif; 
-  }
+  font-size: 2rem;
+  font-weight: 900;
+  font-family: "Roboto", sans-serif;
+}
 /*h5 {
     font-size: 2rem; 
     font-weight: 900; 
@@ -127,7 +127,7 @@ span {
   position: fixed;
   top: 0;
   left: 0;
-  width: 7rem; 
+  width: 7rem;
   height: 100%;
   background-color: var(--black);
   color: var(--white);
@@ -190,17 +190,21 @@ span {
   transform: translateX(-20px);
   transition: transform 0.3s ease, opacity 0.3s ease;
   transition-delay: 0.5s;
+  padding: 15px;
 }
 
 #sidebar:hover .nav__section--link li a .text {
   opacity: 1;
   transform: translateX(0);
   color: var(--white);
+  
 }
-
+#sidebar:hover .nav__section--link li a:hover,
 #sidebar:hover .nav__section--link li a .text:hover{
   color: var(--secondary);
 }
+
+
 
 .social__section {
   position: absolute;
@@ -244,7 +248,7 @@ span {
   justify-content: center;
 }
 
-.btn__cv{
+.btn__cv {
   display: flex;
   justify-content: space-evenly;
 }
@@ -274,7 +278,7 @@ span {
   align-items: center;
   flex-direction: column;
   gap: 2rem;
-  padding-bottom: 6rem;
+  padding-bottom: 10rem;
   width: 100%;
 }
 .about h2 {
@@ -330,10 +334,14 @@ span {
 }
 
 /*--------------------------------------------------  Portfolio  ----------------------------------------------*/
+.portfolio{
+  
+  padding-bottom: 10rem;
+}
 .portfolio h2 {
   padding-top: 10rem;
   text-align: center;
-  padding-top: 5rem;
+  
 }
 
 .portfolio h3 {
@@ -348,6 +356,7 @@ span {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  /* background-image: url(/assets/img/cover.png); */
 }
 
 .box {
@@ -365,13 +374,15 @@ span {
   backdrop-filter: blur(5px);
   transform-style: preserve-3d;
   transform: perspective(800px);
+  
 }
 
 .box a {
   text-decoration: none;
 }
 
-.box img, .description img {
+.box img,
+.description img {
   border-radius: 10px;
   object-fit: cover; /* Assure que l'image couvre l'espace sans déformation */
   width: 200px; /* Largeur fixe pour les images */
@@ -398,15 +409,15 @@ p {
   justify-content: space-evenly;
 }
 
-
 /*--------------------------------------------------  CONTACT  ------------------------------------------------*/
 
 .contact {
   min-height: auto;
-  padding: 30rem 0;
+  padding: 40rem 0 30rem;
 }
 .contact h2 {
   text-align: center;
+  padding-bottom: 10rem;
 }
 
 .contact Form {
